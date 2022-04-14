@@ -19,6 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/inicio', function(){
-    $productos = DB::select('SELECT * FROM productos');
+    /* $productos = DB::select('SELECT * FROM productos'); */
+    $productos = DB::table('productos')->get();
     return view('inicio', ['productos'=>$productos]);
 });
