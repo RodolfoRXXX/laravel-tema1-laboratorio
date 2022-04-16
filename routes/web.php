@@ -15,11 +15,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('inicio');
 });
 
-Route::get('/inicio', function(){
+#CRUD de productos
+Route::get('/productos', function(){
     /* $productos = DB::select('SELECT * FROM productos'); */
     $productos = DB::table('productos')->get();
-    return view('inicio', ['productos'=>$productos]);
+    return view('productos', ['productos'=>$productos]);
+});
+
+#CRUD de categorías
+Route::get('/categorias', function(){
+    $categorias = DB::table('categorias')
+                  ->get();
+    return view('categorias', [ 'categorias'=>$categorias ]);
 });
