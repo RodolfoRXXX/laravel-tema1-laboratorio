@@ -52,7 +52,7 @@
                     <i class="bi bi-pencil-square"></i>
                     Modificar
                 </a>
-                <a href="/categoria/delete/id" class="btn btn-outline-secondary me-1">
+                <a href="/categoria/delete/{{ $categoria->cod_categoria }}" class="btn btn-outline-secondary me-1">
                     <i class="bi bi-trash"></i>
                     &nbsp;Eliminar&nbsp;
                 </a>
